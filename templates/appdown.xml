@@ -29,16 +29,16 @@ $def with (ios_conf)
                 <dict>
                     <key>bundle-identifier</key>
                     <!-- 注意：应用程序identifier -->
-                    <string>home.ImagesC</string>
+                    <string>$ios_conf.ipa_bundle_id</string>
                     <key>bundle-version</key>
-                    <string>1.0</string>
+                    <string>$ios_conf.bundle_version</string>
                     <key>kind</key>
                     <string>software</string>
                     <key>subtitle</key>
-                    <string>Images</string>
+                    <string>$ios_conf.subtitle</string>
                     <key>title</key>
                     <!-- 注意：应用程序名称 -->
-                    <string>ImagesC</string>
+                    <string>$ios_conf.title</string>
                 </dict>
             </dict>
         </array>

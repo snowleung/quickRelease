@@ -3,18 +3,18 @@
 import web
 from core import appconf
 
-urls = (
-    '/', 'index',
-    '/app', 'ClientDown_handler'
-)
-
+ios_conf = appconf.App_iOS_Config()
 render = web.template.render('templates/')
 
-ios_conf = appconf.App_iOS_Config()
+urls = (
+    '/', 'index',
+    '/'+ios_conf.appxmlurl, 'ClientDown_handler'
+)
+
 
 class index:
     def GET(self):
-        return render.index()
+        return render.index(ios_conf)
 
 class ClientDown_handler:
     def GET(self):
