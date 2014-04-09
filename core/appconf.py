@@ -2,7 +2,7 @@
 import os
 class baseConfig:
     def __init__(self):
-        self.local_ip = 'notset'
+        self.local_ip = '192.168.11.222'
         self.file_prefix = 'static/client'
 
 class App_iOS_Config(baseConfig):
@@ -10,13 +10,12 @@ class App_iOS_Config(baseConfig):
         baseConfig.__init__(self)
         self.ipa_file = ipa_file
         self.ipa_bundle_id = bundle_id
-        self.services_url = 'http://ip/appxmlurl'
-        self.appxmlurl = 'app'
-        self.services_url = self.services_url.replace('ip', self.local_ip)
-        self.services_url = self.services_url.replace('appxmlurl', self.appxmlurl)
-        self.bundle_version = '0'
-        self.subtitle = 'notset'
         self.title = os.path.splitext(self.ipa_file)[0]
+        self.services_url = 'http://ip/appxml'
+        self.services_url = self.services_url.replace('ip', self.local_ip)
+        self.services_url = self.services_url.replace('app', self.title)
+        self.bundle_version = '1.0'
+        self.subtitle = 'notset'
         self.ipa_url = 'http://ip/prefix/file'
         self.ipa_url = self.ipa_url.replace('ip', self.local_ip)
         self.ipa_url = self.ipa_url.replace('prefix', self.file_prefix)
