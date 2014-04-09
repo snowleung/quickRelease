@@ -9,7 +9,7 @@ class ClientDowntest(unittest.TestCase):
         a.title = 'jinziqi'
         c = ClientDown([a, ])
         app_config = c.get_config('jinziqi')
-        self.assertTrue(isinstance(App_iOS_Config(), app_config))
+        self.assertTrue(isinstance(app_config, App_iOS_Config))
         self.assertTrue(a.title == app_config.title)
 
 if __name__ == '__main__':
