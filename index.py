@@ -2,10 +2,9 @@
 
 import web
 from core import appconf
-from core.autoBuild import autoBuild
+from core.auto_build import AutoBuild
 
-ios_conf = appconf.App_iOS_Config()
-APPS = autoBuild(['jinziqi.ipa', 'imagesC.ipa'])
+APPS = AutoBuild(['jinziqi.ipa', 'imagesC.ipa'])
 render = web.template.render('templates/')
 
 urls = (
@@ -21,6 +20,7 @@ class index:
 class ClientDown_handler:
     def GET(self):
         web.header('Content-Type', 'text/xml')
+        ios_conf = ''
         return render.appdown(ios_conf)
 
 if __name__ == "__main__":
