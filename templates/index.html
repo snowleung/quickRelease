@@ -1,9 +1,10 @@
-$def with(ios_conf)
+$def with(apps)
 <html>
 <head>
 </head>
 <body>
 <h1>hello world!</h1>
-<a href="itms-services://?action=download-manifest&url=$ios_conf.services_url">install</a>
+$for app in apps:
+    <a href="itms-services://?action=download-manifest&url=/appxml?appkey=$app.title">$app.title</a><br />
 </body>
 </html>
