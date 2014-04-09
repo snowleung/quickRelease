@@ -11,6 +11,12 @@ class ClientDowntest(unittest.TestCase):
         app_config = c.get_config('jinziqi')
         self.assertTrue(isinstance(app_config, App_iOS_Config))
         self.assertTrue(a.title == app_config.title)
+    def test_switch_config_not_exists(self):
+        a = App_iOS_Config()
+        a.title = 'jinziqi'
+        c = ClientDown([a, ])
+        app_config = c.get_config('somethingBreakTheTest')
+        self.assertTrue(app_config is None)
 
 if __name__ == '__main__':
     unittest.main()
