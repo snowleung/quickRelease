@@ -3,7 +3,7 @@ import unittest
 import os
 from appconf import App_iOS_Config
 
-class appconfTest(unittest.TestCase):
+class AppconfTest(unittest.TestCase):
     def test_app_config_init(self):
         ipa_file = 'jinziqi.ipa'
         bundle_id = 1

@@ -3,7 +3,7 @@ import os
 import random
 from appconf import App_iOS_Config
 
-class autoBuild():
+class AutoBuild():
     def __init__(self, files = None):
         self.builds = []
         if files is not None:
