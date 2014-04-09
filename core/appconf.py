@@ -1,5 +1,4 @@
 #coding:utf-8
-
 class baseConfig:
     def __init__(self):
         self.local_ip = 'notset'
