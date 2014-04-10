@@ -1,8 +1,8 @@
 ###HOW TO USE
 
-1. modify index.py, set your own app file name at AutoBuild(), just like this :
+1. modify index.py, set your own app file name and bundle id at AutoBuild(), just like this :
 
-		APPS = AutoBuild(['jinziqi.ipa', 'imagesC.ipa'])
+		APPS = AutoBuild([('jinziqi.ipa','home.jinziqi'), ('imagesC.ipa', 'home.ImagesC')])
 	
 2. modify core/appconf.py, set self.local_ip to your server ip address, just like this
 

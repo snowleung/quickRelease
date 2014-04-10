@@ -5,7 +5,7 @@ from core import appconf
 from core.auto_build import AutoBuild
 from core.client_down import ClientDown
 
-APPS = AutoBuild([('jinziqi.ipa','home.jinziqi'), ('imagesC.ipa', 'home.ImagesC')])
+APPS = AutoBuild([('jinziqi.ipa', 'home.jinziqi'), ('imagesC.ipa', 'home.ImagesC')])
 render = web.template.render('templates/')
 
 urls = (
